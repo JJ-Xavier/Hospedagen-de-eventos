@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhe Conosco - Cadastro de Parceiros</title>
+  <!-- Link do CSS -->
+  <link rel="stylesheet" href="CSS/Incricao-parceiro.css">
+  <!-- Link dos ícones padrão -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Nav bar -->
+<nav class="navbar">
+  <div class="left">
+    <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+  </div>
+
+  <div class="center">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Pesquisar..." id="searchInput">
+    </div>
+  </div>
+
+  <div class="right">
+    <a href="loja.html" class="shop-link" title="Ir para a Loja">
+      <i class="fa-solid fa-bag-shopping shop-icon"></i>
+    </a>
+    <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo" class="logosidebar">
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Menu Lateral -->
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="sidebar-header">
+    <i class="fa-solid fa-user user-big"></i>
+  </div>
+
+  <ul>
+    <li><a href="Home-Cliente.html"> Home </a></li>
+    <li><a href="Perfil.html "> Úsuario </a></li>
+    <li><a href="Minhas-Compras.html"> Minhas Compras </a></li>
+    <li><a href="Hospedagem.html"> hospede seu local aqui !</a></li>
+    <li><a href="Minhas-Hospedagens.html"> Minhas hospedagens </a></li>
+    <li><a href="Inscricao-Parceiro.html"> Increva-se como motorista ou guia </a></li>
+    <li><a href="login.html">sair</a></li>
+  </ul>
+  
+  <div class="sidebar-footer">
+    <button class="config-btn">
+      <i class="fa-solid fa-gear"></i>
+      <span>Configurações</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Conteúdo Principal - Formulário de Inscrição -->
+<main class="form-container">
+  
+  <div class="form-header">
+    <h1>Seja um Parceiro Oficial</h1>
+    <p>Cadastre-se como guia ou motorista, ofereça seus serviços para nossa rede de hóspedes e aumente sua renda.</p>
+  </div>
+
+  <section class="form-card">
+    <form id="partnerForm" onsubmit="event.preventDefault(); alert('Cadastro enviado com sucesso! Nossa equipe analisará seus documentos em até 48 horas.');">
+      
+      <!-- Dados Básicos -->
+      <div class="form-section">
+        <h3><i class="fa-solid fa-id-card"></i> Informações Pessoais</h3>
+        
+        <div class="input-group">
+          <label for="fullName">Nome Completo</label>
+          <input type="text" id="fullName" placeholder="Digite seu nome sem abreviações" required>
+        </div>
+
+        <div class="grid-2-col">
+          <div class="input-group">
+            <label for="partnerPhone">WhatsApp / Contato</label>
+            <input type="tel" id="partnerPhone" placeholder="(11) 99999-9999" required>
+          </div>
+          <div class="input-group">
+            <label for="partnerCity">Cidade / Região de Atuação</label>
+            <input type="text" id="partnerCity" placeholder="Ex: São Paulo - SP" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seleção de Categoria profissional -->
+      <div class="form-section">
+        <h3><i class="fa-solid fa-briefcase"></i> Tipo de Serviço</h3>
+        <label class="input-label-main">O que você deseja oferecer na plataforma?</label>
+        
+        <div class="radio-tiles">
+          <label class="tile-option">
+            <input type="radio" name="roleType" value="guide" checked id="roleGuide">
+            <div class="tile-content">
+              <i class="fa-solid fa-mountain-sun"></i>
+              <span>Guia de Turismo</span>
+            </div>
+          </label>
+
+          <label class="tile-option">
+            <input type="radio" name="roleType" value="driver" id="roleDriver">
+            <div class="tile-content">
+              <i class="fa-solid fa-van-shuttle"></i>
+              <span>Motorista / Transfer</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Campos Dinâmicos (Mudam via JavaScript) -->
+      <div class="form-section dynamic-section" id="dynamicFields">
+        <h3><i class="fa-solid fa-file-shield"></i> Documentação Técnica</h3>
+        
+        <!-- Campo para Guia (Visível por padrão) -->
+        <div id="guideFields" class="animated-field">
+          <div class="input-group">
+            <label for="cadastur">Número do CADASTUR</label>
+            <input type="text" id="cadastur" placeholder="Ex: 26.XXXXXX.XX-X">
+            <small>O cadastro no Ministério do Turismo é obrigatório para guias de turismo regionais.</small>
+          </div>
+        </div>
+
+        <!-- Campo para Motorista (Oculto por padrão) -->
+        <div id="driverFields" class="animated-field hidden">
+          <div class="grid-2-col">
+            <div class="input-group">
+              <label for="cnh">Número da CNH</label>
+              <input type="text" id="cnh" placeholder="Apenas números">
+            </div>
+            <div class="input-group">
+              <label for="vehicleModel">Modelo do Veículo e Vagas</label>
+              <input type="text" id="vehicleModel" placeholder="Ex: Spin 2023 - 6 Lugares">
+            </div>
+          </div>
+          <small>Sua CNH deve conter a observação de Exercício de Atividade Remunerada (EAR).</small>
+        </div>
+      </div>
+
+      <!-- Descrição e Perfil -->
+      <div class="form-section">
+        <h3><i class="fa-solid fa-user-astronaut"></i> Apresentação do seu Trabalho</h3>
+        
+        <div class="input-group">
+          <label for="bio">Biografia / Descrição do Serviço</label>
+          <textarea id="bio" rows="4" placeholder="Conte um pouco sobre sua experiência, os tipos de roteiros que faz ou os veículos que possui. Isso aparecerá no perfil para os clientes..." required></textarea>
+        </div>
+      </div>
+
+      <!-- Botão de Envio -->
+      <div class="form-actions">
+        <button type="submit" class="btn-submit-form">Enviar Minha Inscrição</button>
+      </div>
+
+    </form>
+  </section>
+</main>
+
+<!-- Rodapé padrão unificado -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col about">
+      <span class="logo">Nos acompanhe nas redes sociais!</span>
+      <p class="footer-text">A plataforma ideal para você sair de casa e explorar o mundo!</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-col links">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a href="#">Festivais</a></li>
+        <li><a href="#">Eventos Digitais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+    <div class="footer-col newsletter">
+      <h3>Fique por dentro</h3>
+      <p class="footer-text">Receba novidades e descontos exclusivos de ingressos por e-mail.</p>
+      <form id="newsletterForm" class="footer-form">
+        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="footer-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Seu Evento. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Link do arquivo JavaScript -->
+<script src="JS/Inscricao-Parceiro.js"></script>
+</body>
+</html>

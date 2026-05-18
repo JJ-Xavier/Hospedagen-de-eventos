@@ -1,0 +1,631 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #e0e0ff, #ffffff);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  background-color: #1e1e2f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+}
+
+.left, .center {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Espaço ideal entre o ícone da loja e a logo */
+}
+
+/* ÍCONE DO USUÁRIO */
+.user-icon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.user-icon:hover {
+  color: #7020e7;
+}
+
+/* ÍCONE DA LOJA (NOVO) */
+.shop-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.shop-icon {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.shop-icon:hover {
+  color: #7020e7;
+  transform: scale(1.08);
+}
+
+/* LOGO */
+.logosidebar {
+  height: 24px;
+  width: auto;
+}
+
+/* BARRA DE PESQUISA */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 6px 12px;
+  width: 250px;
+  max-width: 50vw;
+  transition: 0.3s;
+}
+
+.search-box i {
+  margin-right: 8px;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* GRADIENTE NO PLACEHOLDER */
+.search-box input::placeholder {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+/* MENU LATERAL */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -270px;
+  width: 250px;
+  height: 100%;
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 2rem 1rem;
+  transition: left 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 1201;
+}
+
+.sidebar.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* BOTÃO FECHAR */
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* ÍCONE GRANDE DO USUÁRIO */
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.user-big {
+  font-size: 40px;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LINKS DO MENU */
+.sidebar ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #9c9cff;
+}
+
+/* RODAPÉ COM CONFIGURAÇÕES */
+.sidebar-footer {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* OVERLAY (FUNDO ESCURECIDO) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1200;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .search-box {
+    width: 60vw;
+    padding: 4px 10px;
+  }
+  .navbar {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Botão de configurações com texto */
+.config-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.config-btn i {
+  background-color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.config-btn span {
+  font-weight: 500;
+  background-color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.config-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Botão de configurações com texto */
+.config-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.config-btn i {
+  background-color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.config-btn span {
+  font-weight: 500;
+  background-color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.config-btn:hover {
+  transform: scale(1.05);
+}
+
+
+/* Margem para não ficar sob a navbar de 8vh */
+main {
+  margin-top: 8vh;
+  padding-bottom: 5rem;
+}
+
+/* Título Geral do Topo */
+.title h1 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 3rem; 
+  font-weight: 700; 
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  line-height: 1.2; 
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding: 0.5rem;
+}
+
+/* ==========================================================================
+   ESTRUTURA DAS SEÇÕES DAS LOJAS
+   ========================================================================== */
+.store-section {
+  max-width: 1200px;
+  margin: 4rem auto 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho de cada loja (Nome e subtítulo) */
+.store-header {
+  margin-bottom: 2rem;
+  border-left: 5px solid #7c3aed; /* Detalhe roxo charmoso ao lado do nome da loja */
+  padding-left: 15px;
+}
+
+.store-header h2 {
+  font-size: 2rem;
+  color: #1e1e2f;
+  font-weight: 700;
+}
+
+.store-header p {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   VITRINE DE PRODUTOS (Grid e Cartões)
+   ========================================================================== */
+.rooler-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.rooler-card {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.rooler-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.15);
+}
+
+/* Imagem do Produto */
+.rooler-card-image {
+  position: relative;
+  width: 100%;
+}
+
+.rooler-card-image img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Categoria/Tag sobreposta */
+.rooler-card-image .rooler-card-tag {
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #7c3aed;
+  font-size: 0.7rem;
+  padding: 0.4rem 1.1rem;
+  background-color: #e8e8ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Textos internos do Produto */
+.rooler-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem;
+}
+
+.rooler-card-title {
+  color: #1e1e2f;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+}
+
+.rooler-card-text {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem; 
+}
+
+/* Rodapé com botão comprar */
+.rooler-card-footer {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  justify-content: center;
+  width: 100%;
+}
+
+.rooler-card-button {
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(124, 58, 237, 0.2);
+  transition: all 0.3s ease; 
+  text-align: center;
+  width: 100%;
+}
+
+.rooler-card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Ajustes para celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+  }
+
+  .store-section {
+    margin: 2.5rem auto 0 auto;
+  }
+
+  .store-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .rooler-wrapper {
+    grid-template-columns: 1fr; /* Em smartphones vira uma única coluna de produtos */
+    gap: 1.8rem;
+  }
+}
+
+/* FOOTER BASE */
+.footer {
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 4rem 2rem 1rem;
+  width: 100%;
+  margin-top: 5rem; /* Garante um espaçamento do conteúdo acima */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 2rem;
+}
+
+.footer-col h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Linha roxa decorativa abaixo dos títulos das colunas */
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 35px;
+  height: 3px;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  border-radius: 2px;
+}
+
+.footer-text {
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Links das Colunas */
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #a855f7;
+  padding-left: 5px; /* Efeito leve de empurrão ao passar o mouse */
+}
+
+/* Redes Sociais */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  transform: translateY(-3px);
+}
+
+/* Formulário da Newsletter */
+.footer-form {
+  display: flex;
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.footer-form input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0.6rem 1rem;
+  color: #fff;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.footer-form input::placeholder {
+  color: #71717a;
+}
+
+.footer-btn {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.footer-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Direitos Autorais Inferiores */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #71717a;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 968px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 3rem 1rem 1rem;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

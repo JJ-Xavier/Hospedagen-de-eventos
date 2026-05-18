@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Minha Conta - Perfil do Usuário </title>
+  <!-- Link do CSS -->
+  <link rel="stylesheet" href="CSS/Perfil.css">
+  <!-- Link dos ícones padrão -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Nav bar -->
+<nav class="navbar">
+  <div class="left">
+    <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+  </div>
+
+  <div class="center">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Pesquisar..." id="searchInput">
+    </div>
+  </div>
+
+  <div class="right">
+    <!-- Ícone da Loja -->
+    <a href="loja.html" class="shop-link" title="Ir para a Loja">
+      <i class="fa-solid fa-bag-shopping shop-icon"></i>
+    </a>
+    <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo" class="logosidebar">
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Menu Lateral -->
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="sidebar-header">
+    <i class="fa-solid fa-user user-big"></i>
+  </div>
+
+ <ul>
+    <li><a href="Home-Cliente.html"> Home </a></li>
+    <li><a href="Perfil.html "> Úsuario </a></li>
+    <li><a href="Minhas-Compras.html"> Minhas Compras </a></li>
+    <li><a href="Hospedagem.html"> hospede seu local aqui !</a></li>
+    <li><a href="Minhas-Hospedagens.html"> Minhas hospedagens </a></li>
+    <li><a href="Inscricao-Parceiro.html"> Increva-se como motorista ou guia </a></li>
+    <li><a href="login.html">sair</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <button class="config-btn">
+      <i class="fa-solid fa-gear"></i>
+      <span>Configurações</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Conteúdo Principal - Área do Usuário -->
+<main class="profile-container">
+  
+  <!-- Bloco de Resumo / Header do Usuário -->
+  <section class="profile-header-card">
+    <div class="profile-avatar-wrapper">
+      <div class="avatar-circle">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <label href="#" class="edit-avatar-badge" title="Alterar Foto">
+        <i class="fa-solid fa-camera"></i>
+      </label>
+    </div>
+    <div class="profile-intro">
+      <h2 id="displayUserName">Nome do Usuário</h2>
+      <p id="displayUserEmail">usuario@email.com</p>
+      <span class="user-badge">Cliente Premium</span>
+    </div>
+  </section>
+
+  <!-- Corpo com Duas Colunas (Menu de abas e Formulários) -->
+  <div class="profile-content-grid">
+    
+    <!-- Menu Lateral da Conta -->
+    <aside class="profile-nav-box">
+      <button class="nav-tab-btn active" data-tab="dados-pessoais">
+        <i class="fa-solid fa-id-card"></i> Dados Pessoais
+      </button>
+      <button class="nav-tab-btn" data-tab="seguranca">
+        <i class="fa-solid fa-shield-halved"></i> Segurança
+      </button>
+      <button class="nav-tab-btn" data-tab="historico">
+        <i class="fa-solid fa-clock-rotate-left"></i> Meus Ingressos / Reservas
+      </button>
+    </aside>
+
+    <!-- Painéis de Conteúdo Dinâmico -->
+    <section class="profile-panels">
+      
+      <!-- ABA 1: DADOS PESSOAIS -->
+      <div class="tab-panel active" id="dados-pessoais">
+        <h3>Informações da Conta</h3>
+        <form id="formDadosPessoais">
+          <div class="form-group">
+            <label for="inputName">Nome Completo</label>
+            <input type="text" id="inputName" value="Nome do Usuário" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">E-mail</label>
+            <input type="email" id="inputEmail" value="usuario@email.com" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inputPhone">Telefone</label>
+              <input type="tel" id="inputPhone" placeholder="(11) 99999-9999">
+            </div>
+            <div class="form-group">
+              <label for="inputCpf">CPF</label>
+              <input type="text" id="inputCpf" placeholder="000.000.000-00">
+            </div>
+          </div>
+          <button type="submit" class="btn-save">Salvar Alterações</button>
+        </form>
+      </div>
+
+      <!-- ABA 2: SEGURANÇA -->
+      <div class="tab-panel" id="seguranca">
+        <h3>Alterar Senha</h3>
+        <form id="formSeguranca">
+          <div class="form-group">
+            <label for="currentPassword">Senha Atual</label>
+            <input type="password" id="currentPassword" placeholder="••••••••" required>
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Nova Senha</label>
+            <input type="password" id="newPassword" placeholder="Mínimo 8 caracteres" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Nova Senha</label>
+            <input type="password" id="confirmPassword" placeholder="Repita a nova senha" required>
+          </div>
+          <button type="submit" class="btn-save">Atualizar Senha</button>
+        </form>
+      </div>
+
+      <!-- ABA 3: HISTÓRICO (EXEMPLO) -->
+      <div class="tab-panel" id="historico">
+        <h3>Suas Atividades Recentes</h3>
+        <div class="history-list">
+          <div class="history-item">
+            <div class="history-icon"><i class="fa-solid fa-ticket"></i></div>
+            <div class="history-info">
+              <h4>Festival de Verão 2026</h4>
+              <p>Ingresso Comprado em: 14/05/2026</p>
+            </div>
+            <span class="status-badge valid">Confirmado</span>
+          </div>
+          <div class="history-item">
+            <div class="history-icon"><i class="fa-solid fa-hotel"></i></div>
+            <div class="history-info">
+              <h4>Pousada Vale do Sol</h4>
+              <p>Reserva realizada para Julho/2026</p>
+            </div>
+            <span class="status-badge pending">Pendente</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+</main>
+
+<!-- Rodapé padrão unificado -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col about">
+      <span class="logo">Nos acompanhe nas redes sociais!</span>
+      <p class="footer-text">A plataforma ideal para você sair de casa e explorar o mundo!</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-col links">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a href="#">Festivais</a></li>
+        <li><a href="#">Eventos Digitais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+    <div class="footer-col newsletter">
+      <h3>Fique por dentro</h3>
+      <p class="footer-text">Receba novidades e descontos exclusivos de ingressos por e-mail.</p>
+      <form id="newsletterForm" class="footer-form">
+        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="footer-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Seu Evento. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Link do arquivo JavaScript -->
+<script src="JS/Perfil.js"></script>
+</body>
+</html>

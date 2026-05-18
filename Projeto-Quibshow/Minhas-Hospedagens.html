@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Hospedagens - Gerenciamento</title>
+  <!-- Link do CSS -->
+  <link rel="stylesheet" href="CSS/Minhas-Hospedagens.css">
+  <!-- Link dos ícones padrão -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Nav bar -->
+<nav class="navbar">
+  <div class="left">
+    <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+  </div>
+
+  <div class="center">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Pesquisar..." id="searchInput">
+    </div>
+  </div>
+
+  <div class="right">
+    <!-- Ícone da Loja -->
+    <a href="loja.html" class="shop-link" title="Ir para a Loja">
+      <i class="fa-solid fa-bag-shopping shop-icon"></i>
+    </a>
+    <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo" class="logosidebar">
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Menu Lateral -->
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="sidebar-header">
+    <i class="fa-solid fa-user user-big"></i>
+  </div>
+
+  <ul>
+    <li><a href="Home-Cliente.html"> Home </a></li>
+    <li><a href="Perfil.html "> Úsuario </a></li>
+    <li><a href="Minhas-Compras.html"> Minhas Compras </a></li>
+    <li><a href="Hospedagem.html"> hospede seu local aqui !</a></li>
+    <li><a href="Minhas-Hospedagens.html"> Minhas hospedagens </a></li>
+    <li><a href="Inscricao-Parceiro.html"> Increva-se como motorista ou guia </a></li>
+    <li><a href="login.html">sair</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <button class="config-btn">
+      <i class="fa-solid fa-gear"></i>
+      <span>Configurações</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Conteúdo Principal -->
+<main class="dashboard-container">
+  
+  <!-- Título do Painel -->
+  <div class="dashboard-header">
+    <h1>Minhas Hospedagens</h1>
+    <p>Acompanhe suas propriedades anunciadas, estatísticas de visitas e parceiros recomendados.</p>
+  </div>
+
+  <!-- SEÇÃO 1: SUAS PROPRIEDADES ANUNCIADAS -->
+  <section class="section-block">
+    <h2 class="section-title"><i class="fa-solid fa-hotel"></i> Imóveis Ativos</h2>
+    
+    <div class="properties-grid">
+      
+      <!-- Hospedagem 1 -->
+      <div class="host-card">
+        <div class="card-status active">Ativo no Catálogo</div>
+        <div class="host-body">
+          <div class="host-main-info">
+            <h3>Chalé Vista da Montanha</h3>
+            <p><i class="fa-solid fa-location-dot"></i> São Bento do Sapucaí - SP</p>
+            <p class="price-tag">R$ 350,00 / diária</p>
+          </div>
+          
+          <!-- Contador de Pessoas que já foram -->
+          <div class="counter-box">
+            <span class="counter-number">142</span>
+            <span class="counter-label"> Ingressos </span>
+          </div>
+        </div>
+        <div class="host-footer">
+          <button class="btn-manage" onclick="alert('Abrindo calendário de reservas do Chalé...')">
+            <i class="fa-solid fa-calendar-check"></i> Calendário
+          </button>
+          <button class="btn-edit" onclick="alert('Carregando dados para edição...')">Editar Anúncio</button>
+        </div>
+      </div>
+
+      <!-- Hospedagem 2 -->
+      <div class="host-card">
+        <div class="card-status active">Ativo no Catálogo</div>
+        <div class="host-body">
+          <div class="host-main-info">
+            <h3>Studio Design Moderno - Centro</h3>
+            <p><i class="fa-solid fa-location-dot"></i> São Paulo - SP</p>
+            <p class="price-tag">R$ 210,00 / diária</p>
+          </div>
+          
+          <!-- Contador de Pessoas que já foram -->
+          <div class="counter-box">
+            <span class="counter-number">68</span>
+            <span class="counter-label"> Ingressos </span>
+          </div>
+        </div>
+        <div class="host-footer">
+          <button class="btn-manage" onclick="alert('Abrindo calendário de reservas do Studio...')">
+            <i class="fa-solid fa-calendar-check"></i> Calendário
+          </button>
+          <button class="btn-edit" onclick="alert('Carregando dados para edição...')">Editar Anúncio</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: GUIAS E MOTORISTAS PARCEIROS (RECOMENDAÇÕES) -->
+  <section class="section-block partners-section">
+    <h2 class="section-title"><i class="fa-solid fa-handshake"></i> Profissionais para Recomendar</h2>
+    <p class="section-subtitle">Indique esses profissionais locais verificados para os hóspedes da sua viagem aumentarem sua avaliação.</p>
+    
+    <div class="partners-grid">
+      
+      <!-- Parceiro 1: Guia -->
+      <div class="partner-card">
+        <div class="partner-header">
+          <div class="partner-avatar">
+            <i class="fa-solid fa-user-ninja"></i>
+          </div>
+          <div class="partner-meta">
+            <h3>Carlos Henrique</h3>
+            <span class="tag-role guide">Guia Regional</span>
+          </div>
+        </div>
+        <div class="partner-body">
+          <p><i class="fa-solid fa-mountain-sun"></i> Especialista em: Trilhas, Ecoturismo e Escalada.</p>
+          <p><i class="fa-solid fa-star" style="color: #ca8a04;"></i> Avaliação média: 4.9 (45 indicações)</p>
+        </div>
+        <div class="partner-actions">
+          <button class="btn-recommend active" onclick="this.classList.toggle('recommended'); alert('Status de recomendação atualizado para seus hóspedes!')">
+            <i class="fa-solid fa-circle-check"></i> Recomendado
+          </button>
+          <a href="https://wa.me/5500000000000" target="_blank" class="btn-contact"><i class="fa-brands fa-whatsapp"></i> Falar</a>
+        </div>
+      </div>
+
+      <!-- Parceiro 2: Motorista -->
+      <div class="partner-card">
+        <div class="partner-header">
+          <div class="partner-avatar">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div class="partner-meta">
+            <h3>Mariana Souza</h3>
+            <span class="tag-role driver">Motorista / Transf.</span>
+          </div>
+        </div>
+        <div class="partner-body">
+          <p><i class="fa-solid fa-van-shuttle"></i> Veículo: Van Executiva (Até 12 passageiros) e Aeroporto.</p>
+          <p><i class="fa-solid fa-star" style="color: #ca8a04;"></i> Avaliação média: 5.0 (82 indicações)</p>
+        </div>
+        <div class="partner-actions">
+          <button class="btn-recommend active" onclick="this.classList.toggle('recommended'); alert('Status de recomendação atualizado para seus hóspedes!')">
+            <i class="fa-solid fa-circle-check"></i> Recomendado
+          </button>
+          <a href="https://wa.me/5500000000000" target="_blank" class="btn-contact"><i class="fa-brands fa-whatsapp"></i> Falar</a>
+        </div>
+      </div>
+
+      <!-- Parceiro 3: Guia -->
+      <div class="partner-card">
+        <div class="partner-header">
+          <div class="partner-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="partner-meta">
+            <h3>Roberto Alencar</h3>
+            <span class="tag-role guide">Guia Histórico</span>
+          </div>
+        </div>
+        <div class="partner-body">
+          <p><i class="fa-solid fa-gavel"></i> Especialista em: Museus, Centros Históricos e Gastronomia.</p>
+          <p><i class="fa-solid fa-star" style="color: #ca8a04;"></i> Avaliação média: 4.7 (19 indicações)</p>
+        </div>
+        <div class="partner-actions">
+          <button class="btn-recommend" onclick="this.classList.toggle('recommended'); alert('Você adicionou Roberto às recomendações dos seus hóspedes!')">
+            <i class="fa-solid fa-plus"></i> Recomendar
+          </button>
+          <a href="https://wa.me/5500000000000" target="_blank" class="btn-contact"><i class="fa-brands fa-whatsapp"></i> Falar</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Rodapé padrão unificado -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col about">
+      <span class="logo">Nos acompanhe nas redes sociais!</span>
+      <p class="footer-text">A plataforma ideal para você sair de casa e explorar o mundo!</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-col links">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a href="#">Festivais</a></li>
+        <li><a href="#">Eventos Digitais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+    <div class="footer-col newsletter">
+      <h3>Fique por dentro</h3>
+      <p class="footer-text">Receba novidades e descontos exclusivos de ingressos por e-mail.</p>
+      <form id="newsletterForm" class="footer-form">
+        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="footer-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Seu Evento. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Link do arquivo JavaScript -->
+<script src="JS/Minhas-Hospedagens.js"></script>
+</body>
+</html>

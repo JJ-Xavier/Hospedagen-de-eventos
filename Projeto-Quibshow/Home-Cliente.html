@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Home </title>
+  <!-- Link do CSS -->
+  <link rel="stylesheet" href="CSS/Home-Cliente.css">
+  <!-- Link dos icones padrão -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Link do Swipper CSS -->
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+<body>
+
+  <!-- Nav bar -->
+<nav class="navbar">
+  <div class="left">
+    <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+  </div>
+
+  <div class="center">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Pesquisar..." id="searchInput">
+    </div>
+  </div>
+
+  <div class="right">
+    <!-- Ícone da Loja -->
+    <a href="Loja.html" class="shop-link" title="Ir para a Loja">
+      <i class="fa-solid fa-bag-shopping shop-icon"></i>
+    </a>
+    <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo" class="logosidebar">
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="sidebar-header">
+    <i class="fa-solid fa-user user-big"></i>
+  </div>
+
+  <ul>
+    <li><a href="Home-Cliente.html"> Home </a></li>
+    <li><a href="Perfil.html "> Úsuario </a></li>
+    <li><a href="Minhas-Compras.html"> Minhas Compras </a></li>
+    <li><a href="Hospedagem.html"> hospede seu local aqui !</a></li>
+    <li><a href="Minhas-Hospedagens.html"> Minhas hospedagens </a></li>
+    <li><a href="Inscricao-Parceiro.html"> Increva-se como motorista ou guia </a></li>
+    <li><a href="login.html">sair</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <button class="config-btn">
+      <i class="fa-solid fa-gear"></i>
+      <span>Configurações</span>
+    </button>
+  </div>
+</aside>
+
+
+
+  <!-- Slider -->
+
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <button class="slider-nav prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="slider" id="main-slider">
+        <div class="slide active">
+          <img src="IMG/festival-verao-2.jpeg" alt="Festival de Verão" class="slide-image">
+          <div class="slide-overlay"></div> 
+          <div class="slide-content">
+            <h3 class="slide-title">Festival de Verão 2024</h3>
+            <p class="slide-description">Os maiores artistas nacionais em uma noite inesquecível</p>
+            <button class="slide-button">Comprar Ingresso</button>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <img src="IMG/show-rock-img.jpg" alt="Show de Rock" class="slide-image">
+          <div class="slide-overlay"></div> 
+          <div class="slide-content">
+            <h3 class="slide-title">Rock Nacional</h3>
+            <p class="slide-description">Clássicos do rock brasileiro em uma apresentação épica</p>
+            <button class="slide-button">Comprar Ingresso</button>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <img src="IMG/eletronica-img.jpg" alt="Festa Eletrônica" class="slide-image">
+          <div class="slide-overlay"></div> 
+          <div class="slide-content">
+            <h3 class="slide-title">Festa Eletrônica</h3>
+            <p class="slide-description">DJs internacionais em uma experiência única de som e luz</p>
+            <a href="Eventos/Evento-1.html" class="slide-button">Comprar Ingresso</a>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <img src="IMG/Carnaval-img.jpg" alt="Carnaval" class="slide-image">
+          <div class="slide-overlay"></div> 
+          <div class="slide-content">
+            <h3 class="slide-title">Carnaval 2024</h3>
+            <p class="slide-description">Blocos e trios elétricos pelas ruas da cidade</p>
+            <button class="slide-button">Ver Programação</button>
+          </div>
+        </div>
+      </div>
+      
+      <button class="slider-nav next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    
+    <div class="slider-dots" id="slider-dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <!-- titulo -->
+  </div>
+  <div class="title h1">
+    <h1> O que tem de novo ? </h1>
+  </div>
+
+  <!-- Rooler infinito -->
+
+  <div class="rooler-container swiper">
+    <div class="rooler-wrapper">
+      <div class="rooler-card-list swiper-wrapper">
+        <div class="rooler-card swiper-slide">
+          <div class="rooler-card-image">
+            <img src="IMG/Imagem-exemplo-card.jpg" alt="card-rooler imagem">
+            <p class="rooler-card-tag"> Em desenvolvimento </p>
+          </div>
+          <div class="rooler-card-content">
+            <h3 class="rooler-card-title"> Titulo Card </h3>
+            <p class="rooler-card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque debitis veritatis harum atque assumenda commodi, ad aspernatur sapiente beatae eligendi porro alias natus expedita tenetur corrupti facere, fugit enim? </p>
+            <div class="rooler-card-footer">
+              <a href="Eventos/Evento-1.html" class="rooler-card-button"> Em desenvolvimento </a>
+            </div>
+          </div>
+        </div>
+        <div class="rooler-card swiper-slide">
+          <div class="rooler-card-image">
+            <img src="IMG/Imagem-exemplo-card.jpg" alt="card-rooler imagem">
+            <p class="rooler-card-tag"> Em desenvolvimento </p>
+          </div>
+          <div class="rooler-card-content">
+            <h3 class="rooler-card-title"> Titulo Card </h3>
+            <p class="rooler-card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque debitis veritatis harum atque assumenda commodi, ad aspernatur sapiente beatae eligendi porro alias natus expedita tenetur corrupti facere, fugit enim? </p>
+            <div class="rooler-card-footer">
+              <a href="Eventos/Evento-2.html" class="rooler-card-button"> Em desenvolvimento </a>
+            </div>
+          </div>
+        </div>
+        <div class="rooler-card swiper-slide">
+          <div class="rooler-card-image">
+            <img src="IMG/Imagem-exemplo-card.jpg" alt="card-rooler imagem">
+            <p class="rooler-card-tag"> Em desenvolvimento </p>
+          </div>
+          <div class="rooler-card-content">
+            <h3 class="rooler-card-title"> Titulo Card </h3>
+            <p class="rooler-card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque debitis veritatis harum atque assumenda commodi, ad aspernatur sapiente beatae eligendi porro alias natus expedita tenetur corrupti facere, fugit enim? </p>
+            <div class="rooler-card-footer">
+              <a href="Eventos/Evento-3.html" class="rooler-card-button"> Em desenvolvimento </a>
+            </div>
+          </div>
+        </div>
+        <div class="rooler-card swiper-slide">
+          <div class="rooler-card-image">
+            <img src="IMG/Imagem-exemplo-card.jpg" alt="card-rooler imagem">
+            <p class="rooler-card-tag"> Em desenvolvimento </p>
+          </div>
+          <div class="rooler-card-content">
+            <h3 class="rooler-card-title"> Titulo Card </h3>
+            <p class="rooler-card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque debitis veritatis harum atque assumenda commodi, ad aspernatur sapiente beatae eligendi porro alias natus expedita tenetur corrupti facere, fugit enim? </p>
+            <div class="rooler-card-footer">
+              <a href="Eventos/Evento-4.html" class="rooler-card-button"> Em desenvolvimento </a>
+            </div>
+          </div>
+        </div>
+        <div class="rooler-card swiper-slide">
+          <div class="rooler-card-image">
+            <img src="IMG/Imagem-exemplo-card.jpg" alt="card-rooler imagem">
+            <p class="rooler-card-tag"> Em desenvolvimento </p>
+          </div>
+          <div class="rooler-card-content">
+            <h3 class="rooler-card-title"> Titulo Card </h3>
+            <p class="rooler-card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque debitis veritatis harum atque assumenda commodi, ad aspernatur sapiente beatae eligendi porro alias natus expedita tenetur corrupti facere, fugit enim? </p>
+            <div class="rooler-card-footer">
+              <a href="Eventos/Evento-5.html" class="rooler-card-button"> Em desenvolvimento </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    </div>
+  <div>
+    <div class="title h1">
+      <h1> O que tem perto de mim ? </h1>
+    </div>
+    <div>
+      <div class="right">
+        <img src="/Projeto/Documentos-SHOW/Criativo-API/Mapa-quibshow.png" alt="Logo" class="image-maps-principal">
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Coluna 1: Sobre / Logo -->
+    <div class="footer-col about">
+      <span class="logo">Nos acompanhe nas redes sociais !</span>
+      <p class="footer-text"> A plataforma ideal para você sair de casa e explorar o mundo ! </p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <!-- Coluna 2: Links Rápidos -->
+    <div class="footer-col links">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a href="#">Festivais</a></li>
+        <li><a href="#">Eventos Digitais</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 3: Suporte -->
+    <div class="footer-col links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 4: Newsletter (Inscrição) -->
+    <div class="footer-col newsletter">
+      <h3>Fique por dentro</h3>
+      <p class="footer-text">Receba novidades e descontos exclusivos de ingressos por e-mail.</p>
+      <form id="newsletterForm" class="footer-form">
+        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="footer-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Barra de Direitos Autorais -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 Quibshow.com.br Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+  <!-- Link do Script padrão -->
+  <script src="JS/Home-Cliente.js" defer></script>
+  <!-- Link do Script Swipper CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</body>
+</html>

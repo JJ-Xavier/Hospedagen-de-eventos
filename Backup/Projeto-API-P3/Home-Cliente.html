@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Home </title>
+  <link rel="stylesheet" href="CSS/Home-Cliente.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Nav bar -->
+  <nav class="navbar">
+    <div class="left">
+      <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+    </div>
+
+    <div class="center">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Pesquisar..." id="searchInput">
+      </div>
+    </div>
+
+    <div class="right">
+      <img src="IMG/referencia-logo.jpg" alt="Logo" class="logo">
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="sidebar-header">
+      <i class="fa-solid fa-user user-big"></i>
+    </div>
+
+    <ul>
+      <li><a href="#">Página 1</a></li>
+      <li><a href="#">Página 2</a></li>
+      <li><a href="#">Página 3</a></li>
+      <li><a href="#">Página 4</a></li>
+      <li><a href="#">Página 5</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <button class="config-btn">
+        <i class="fa-solid fa-gear"></i>
+        <span>Configurações</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Slider -->
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <button class="slider-nav prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="slider" id="main-slider">
+        <div class="slide active">
+          <img src="IMG/festival-verao-2.jpeg" alt="Festival de Verão" class="slide-image">
+          <div class="slide-overlay"></div> <!-- ← NOVO -->
+          <div class="slide-content">
+            <h3 class="slide-title">Festival de Verão 2024</h3>
+            <p class="slide-description">Os maiores artistas nacionais em uma noite inesquecível</p>
+            <button class="slide-button">Comprar Ingresso</button>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <img src="IMG/show-rock-img.jpg" alt="Show de Rock" class="slide-image">
+          <div class="slide-overlay"></div> <!-- ← NOVO -->
+          <div class="slide-content">
+            <h3 class="slide-title">Rock Nacional</h3>
+            <p class="slide-description">Clássicos do rock brasileiro em uma apresentação épica</p>
+            <button class="slide-button">Comprar Ingresso</button>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <img src="IMG/eletronica-img.jpg" alt="Festa Eletrônica" class="slide-image">
+          <div class="slide-overlay"></div> <!-- ← NOVO -->
+          <div class="slide-content">
+            <h3 class="slide-title">Festa Eletrônica</h3>
+            <p class="slide-description">DJs internacionais em uma experiência única de som e luz</p>
+            <button class="slide-button">Comprar Ingresso</button>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <img src="IMG/Carnaval-img.jpg" alt="Carnaval" class="slide-image">
+          <div class="slide-overlay"></div> <!-- ← NOVO -->
+          <div class="slide-content">
+            <h3 class="slide-title">Carnaval 2024</h3>
+            <p class="slide-description">Blocos e trios elétricos pelas ruas da cidade</p>
+            <button class="slide-button">Ver Programação</button>
+          </div>
+        </div>
+      </div>
+      
+      <button class="slider-nav next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    
+    <div class="slider-dots" id="slider-dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <main style="height:200vh; background:linear-gradient(180deg,#e0e0ff,#fff);"></main>
+
+  <script src="JS/Home-Cliente.js" defer></script>
+</body>
+</html>

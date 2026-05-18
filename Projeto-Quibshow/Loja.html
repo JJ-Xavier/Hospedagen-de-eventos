@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Loja </title>
+  <!-- Link do CSS -->
+  <link rel="stylesheet" href="CSS/Loja.css">
+  <!-- Link dos icones padrão -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Link do Swipper CSS -->
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+
+<!-- Nav bar -->
+<nav class="navbar">
+  <div class="left">
+    <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+  </div>
+
+  <div class="center">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Pesquisar..." id="searchInput">
+    </div>
+  </div>
+
+  <div class="right">
+    <!-- Ícone da Loja -->
+    <a href="loja.html" class="shop-link" title="Ir para a Loja">
+      <i class="fa-solid fa-bag-shopping shop-icon"></i>
+    </a>
+    <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo" class="logosidebar">
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="sidebar-header">
+    <i class="fa-solid fa-user user-big"></i>
+  </div>
+
+  <ul>
+    <li><a href="Home-Cliente.html"> Home </a></li>
+    <li><a href="Perfil.html "> Úsuario </a></li>
+    <li><a href="Minhas-Compras.html"> Minhas Compras </a></li>
+    <li><a href="Hospedagem.html"> hospede seu local aqui !</a></li>
+    <li><a href="Minhas-Hospedagens.html"> Minhas hospedagens </a></li>
+    <li><a href="Inscricao-Parceiro.html"> Increva-se como motorista ou guia </a></li>
+    <li><a href="login.html">sair</a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <button class="config-btn">
+      <i class="fa-solid fa-gear"></i>
+      <span>Configurações</span>
+    </button>
+  </div>
+</aside>
+
+<main>
+  <!-- TÍTULO PRINCIPAL DA PÁGINA -->
+  <div class="title">
+    <h1>Loja QuibShow</h1>
+    <hr>
+  </div>
+
+  <!-- SEÇÃO 1: CASASMANIA -->
+  <section class="store-section">
+    <div class="store-header">
+      <h2>Casasmania</h2>
+      <p>Utilidades, móveis e decorações para o seu lar</p>
+    </div>
+    
+    <div class="rooler-wrapper">
+      <!-- Produto 1 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=400&auto=format&fit=crop" alt="Sofá Confort">
+          <span class="rooler-card-tag">Móveis</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Sofá Minimalista Confort</h3>
+          <p class="rooler-card-text">Sofá de 3 lugares com tecido suede de alta resistência e espuma soft.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=400&auto=format&fit=crop" alt="Luminária Moderna">
+          <span class="rooler-card-tag">Iluminação</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Luminária de Mesa Articulada</h3>
+          <p class="rooler-card-text">Perfeita para escritórios e home office, com ajuste de ângulo e base pesada.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=400&auto=format&fit=crop" alt="Cadeira Nórdica">
+          <span class="rooler-card-tag">Decoração</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Cadeira de Jantar Nórdica</h3>
+          <p class="rooler-card-text">Design escandinavo com pés em madeira maciça e assento ergonômico.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: ULULU -->
+  <section class="store-section">
+    <div class="store-header">
+      <h2>Ululu</h2>
+      <p>Moda jovem, urbana e acessórios cheios de estilo</p>
+    </div>
+    
+    <div class="rooler-wrapper">
+      <!-- Produto 1 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=400&auto=format&fit=crop" alt="Jaqueta Couro">
+          <span class="rooler-card-tag">Roupas</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Jaqueta Bomber Preta</h3>
+          <p class="rooler-card-text">Jaqueta unissex com forro térmico leve, ideal para saídas casuais à noite.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=400&auto=format&fit=crop" alt="Tênis Street">
+          <span class="rooler-card-tag">Calçados</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Tênis Street Run</h3>
+          <p class="rooler-card-text">Amortecimento responsivo e conforto extremo para o corre do dia a dia.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=400&auto=format&fit=crop" alt="Óculos de Sol">
+          <span class="rooler-card-tag">Acessórios</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Óculos Retro Vintage</h3>
+          <p class="rooler-card-text">Lentes com proteção UV400 e armação leve de policarbonato.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: CHICHIQUE BAHIA -->
+  <section class="store-section">
+    <div class="store-header">
+      <h2>Chichique Bahia</h2>
+      <p>O charme da alta moda com a energia e leveza baiana</p>
+    </div>
+    
+    <div class="rooler-wrapper">
+      <!-- Produto 1 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=400&auto=format&fit=crop" alt="Vestido de Linho">
+          <span class="rooler-card-tag">Coleções</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Vestido Midi de Linho</h3>
+          <p class="rooler-card-text">Tecido 100% natural, fresco e elegante. Perfeito para dias ensolarados.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=400&auto=format&fit=crop" alt="Bolsa de Palha">
+          <span class="rooler-card-tag">Artesanal</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Bolsa Premium Beach</h3>
+          <p class="rooler-card-text">Bolsa trançada manualmente com acabamento interno de cetim e alças de couro.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="rooler-card">
+        <div class="rooler-card-image">
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=400&auto=format&fit=crop" alt="Chapéu Fedora">
+          <span class="rooler-card-tag">Acessórios</span>
+        </div>
+        <div class="rooler-card-content">
+          <h3 class="rooler-card-title">Chapéu de Sol Riviera</h3>
+          <p class="rooler-card-text">Proteção com sofisticação. Aba larga maleável e faixa decorativa preta.</p>
+          <div class="rooler-card-footer">
+            <a href="#" class="rooler-card-button">Comprar</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Coluna 1: Sobre / Logo -->
+    <div class="footer-col about">
+      <span class="logo">Nos acompanhe nas redes sociais !</span>
+      <p class="footer-text"> A plataforma ideal para você sair de casa e explorar o mundo ! </p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <!-- Coluna 2: Links Rápidos -->
+    <div class="footer-col links">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a href="#">Festivais</a></li>
+        <li><a href="#">Eventos Digitais</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 3: Suporte -->
+    <div class="footer-col links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 4: Newsletter (Inscrição) -->
+    <div class="footer-col newsletter">
+      <h3>Fique por dentro</h3>
+      <p class="footer-text">Receba novidades e descontos exclusivos de ingressos por e-mail.</p>
+      <form id="newsletterForm" class="footer-form">
+        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="footer-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Barra de Direitos Autorais -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 Quibshow.com.br Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="../Projeto-Quibshow/JS/Loja.js"></script>
+
+
+</body>
+</html>

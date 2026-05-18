@@ -1,0 +1,353 @@
+<h1 id="topo">Arquivo destinado a mostrar os codigos que eu conheço e suas funções dentro do html</h1> <hr> 
+
+<!-- Meta Tags:-->
+    <html lang="pt-br">                                                     <!-- linguagem padräo do site -->
+    <meta charset="UTF-8">                                                  <!--resolve problemas de acentuaçäo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Tela se adapta ao disposito da pessoa -->
+    <meta name="description" content="Esse é meu primeiro site!">           <!-- descriçäo de um pouco do conteudo no link do seu site -->
+    <meta name="author" content="Jackson Junio Xavier Franco">              <!-- avisa o site que voce é o autor -->
+<!-- Tags: -->
+<!-- Tags de Alinhamento de textos -->
+    <!-- <style> body {tags de alinhamento} </style> essa e a base para conseguir movimentar o texto -->
+    <!-- <style> h1, h2, h3, {tags de alinhamento} serve para identificar qual parte do texto será modificada -->
+    <!-- h1 {text-aling: left;} serve para colocar o texto a esquerda -->
+    <!-- h1 {text-aling: center;} center; serve para colocar o texto ao centro -->
+    <!-- h1 {text-aling: rigth; serve para colocar o texto a direita } -->
+    <!-- h1 {text-indent: 20px:} serve para colocar o espaçamento antes do paragrafo -->
+<!-- uso de tegs que väo mudar informaçöes no texto -->
+    <!-- <b></b> deixa em negrito, evidenciando o texto que eu quero, mesma coisa com o <strong></strong> -->
+    <!-- <hr> que coloca uma linha para separar partes do site por linhas -->
+    <!-- <br> ele separa as linhas de uma escrita sem nescessariamente chegar no final -->
+    <!-- <i></i> significa italico,a  letra fica um pouco torta -->
+    <!-- <small></small> deixa a fonte do texto bem menor -->
+    <!-- <del></del> serve para riscar um texto como um preço de algo -->
+    <!-- <sup></sup> serve para elevar os numeros -->
+    <!-- <sub></sub> serve para abaixar um numero ou caractere -->
+    <!-- <mark></mark> destacar o texto como um marcatexto porém da para fazer em css -->
+    <!-- <u></u> que e o sublinhado -->
+<!-- Elementos de citaçäo -->
+<!-- Elementos que mudam ou citam uma informçäo expecifica -->
+    <!-- <adress></adress> serve para evidenciar um endereço de um lugar especifico -->
+    <!-- <cite></cite> para evidenciar o nome de uma obra seja ela de cinema ou qualquer outro tipo -->
+    <!-- <q></q> citaçäo curta de alguma fala de alguém -->
+    <!-- <blockquote></blockquote> serve para evidenciar uma citaçäo expecifica -->
+<!-- Codígo de Línks -->
+    <!-- <a href=""></a> dentro das aspas colocar o endereço do link, esse e a forma de um caminho absoluto 
+           exemplo: <a href="https://google.com"> ir para o google </a>   -->
+    <!-- adiçionando o atributo "target" eu posso abrir esse link em outra aba em vez de mudar a aba atual do usúario -->
+<!-- Exemplo real em codigo:  -->
+           <a href="https://google.com" target="_blank"> ir para o Google </a> <br>   <!-- o target para abrir outro site tem que 
+                                                                                      estar acompanhado do "_blank"-->
+<!-- Línk Relativo -->
+    <!-- <a href="pasta dentro do visual code"> abrir pasta </a> --> <!-- serve para entrar em outra aba do site 
+                                                                                que posso controlar -->
+
+<!--  Para indicar o caminho que a programaçäo tem que realizar tem um codigo especifico mostrando a pasta que ele tem que procurar -->
+    <!-- Para entrar na pasta preciso colcoar o nome da pasta e depois o arquivo que ele deve procurar exemplo: -->
+           <a href="equipe/Jackson.html"> Jackson </a> <br> 
+           <!-- "equipe" e = a pasta que eu quero entrar e "jackson" e igual ao arquivo que eu quero que abra! -->
+    <!-- Para eu retornar a pagina principal eu preciso realizar o comando que sinaliza que está a uma pasta para trás exemplo: -->
+           <a href="../paginaprincipal.html"> Voltar para pagina pricipal </a> <br> 
+    <!-- Utilizo esse comando "../" para sinalizar que o programa deve procurar o arquivo na pagína anterior (posso repeti-lo, volta 2 pagínas)-->
+<!-- Link de voltar ao topo -->
+    <!-- colocar o id no meu primeiro h1 -->
+    <!-- <a href="#id no topo"> voltar ao topo </a> -->
+      <!-- Exemplo -->
+       <a href="#topo" > Voltar ao topo </a> <br> 
+<!-- Como usar as Imagens  --> ( banco de imagems gratuito: pexels )
+    <!-- <img src=""> esse e o comando principal -->
+    <!-- <img src="" width="300 " agora ele vai posicionar a imagem com a quantidade de pixels que eu quero (na largura). -->
+    <!-- <img src="" width="" height="" agora ele vai posicionar a altura e a largura da imagem. --> 
+    <!-- (baixar a imagem na pasta como jpg, pasta com o nome de Imagens) serve para utilizar uma imagem ja baixada. -->
+    <!-- <img src="(pasta da imagem salva)/(nome da imagem salva)" agora a imagem vai ser exibida no site, e posso junta-la com as informações anteriores. -->
+    <!-- também posso deixar a imagem mais leve utilizando o site "compress JEPG" e depois passar no "tinyJPG" assim a imagem fica muito mais
+         leve o que melhora muito o carregamento do site, muito bom. -->
+    <!-- "eazy-recize" redimencionar minha imagem para a quantidade de pixels que eu quero mantendo a imagem sem nehuma distorção.  -->
+    <!-- <img src="imagem" alt=" caracteristicas da imagem" o alt serve para inclusão social, pessoas cegas podem ouvir o que foi colocado no alt.-->
+    <!-- adição de gif eu utilizo o mesmo tipo de codigo, baixa o gif e depois coloca como img. -->
+    <!-- "flaticom" conseguir icones utilizaveis, para colocar no site. -->
+    <!-- <a href="link"> <img src="imagem clicavel" <a/> serve para tornar a imagem um link que redireciona a pagina para onde quiser-->
+    <!-- background-size: cover; /* para cobrir toda a tela */
+         background-repeat: no-repeat; /* para não repetir a imagem */
+         background-position: center; /* centralizar a imagem */ -->
+<!-- Tabelas -->
+     <!-- <table></table> utiliza para abrir -->
+     <!-- <table> <tr></tr> </table> cada tr significa uma linha -->
+     <!-- <table> <tr> <th></th> </tr> </table> o th e a coluna com os titulos que servem de dimensão para a coluna -->
+     <!-- <table> <tr> <td></td> </tr> </table> o td serve para os proximos itens da tabela que não forem o titulo -->
+     <!-- <table width="100%" > serve para colocar a largura do tamanho escolhido -->
+     <!-- <table border "1,2,3,4..." > serve para mudar a borda da tabela -->
+     <!-- <table style="text-aling: center; " > serve para direcionar o espaço do texto dentro da tabela -->
+<!-- Modificações possiveis na tabela -->
+     <!-- <style> table {alguma informação que queira modificar} </style> agora minha tabela pode possuir alguma informação que eu queira -->
+     <!-- <style> td, table, tr {informações/comandos} </style> posso modifiicar cada área que eu quiser -->
+     <!-- <style> td."palavra de organização" {comando} Após isso e so urilizar o "class="palavra de organização" e agora a informação dada será aplicada -->
+     <!-- <style> td {border: 1px solid black;} </style> exemplo de comando -->
+     <!-- <style> table {width:"400" border-collapse: collapse; } exemplo de comando -->
+     <!-- <style> td {padding: 8px;} exemplo de comando -->
+     <!-- <style> tr."" {background-color: gray} exemplo de comando -->
+     <!-- <td colspan="1,2,3..." > "conteúdo" </td> essa tag serve para juntar uma ou mais colunas em uma unica linha -->
+     <!-- <td rowspan="1,2,3..." > "conteúdo" </td> essa tag serve para juntar uma ou mais linhas em apenas uma unica coluna -->
+     <!-- após e so usar o comando class e colocar a palavra de comando -->
+    <!-- Exemplo de tabela: -->
+       <style>
+            table  {
+                text-align: center;
+                background-color: gray;
+                width: 300;
+                height: 300;
+            }      
+            td.um {
+                background-color: slategray;
+                text-align: left;
+            }
+            th.dois {
+                background-color: white;
+                padding: 5px;
+                text-align: center ;
+            }
+       </style>
+        <table border="2">
+            <tr>
+                <th class="dois" rowspan="2"> A1 </th>
+                <th colspan="2"> A2 </th>
+                <th> A3 </th>
+            </tr>
+            <tr>
+                <td class="um"> B1 </td>
+                <td> B2 </td>
+                <td rowspan="2"> B3 </td>
+            </tr>
+            <tr> 
+                <td class="um"> C1 </td>
+                <td> C2 </td>
+                <td> C3 </td>
+            </tr>
+        </table>
+<!-- Listas -->
+     <!-- <ul></ul> serve para listas não ordenada -->
+     <!-- <ul> <li></li> </ul> o li serve para colocar os itens dentro de uma  lista não ordenada -->
+     <!-- <ol></ol> serve para as listas ordenadas, realiza a contagem dos itens de forma cordenada -->
+     <!-- <ol> <li></li> </ol> serve para colocar os itens da lista de forma ordenada -->
+     <!-- <ol type=""> </ol> serve para modificar a lista ordenada, de acordo com as opções disponiveis -->
+     <!-- <ol> type="a" "A" "I" "i" "1" > </ol> esse são algumas das opções de enumeração das listas -->
+     <!-- <ul type"disc"></ul> esse type e para a as não ordenadas e faz um circulo fechado "padrão" -->
+     <!-- <ul type"circle"></ul> circulo aberto -->
+     <!-- <ul type"square" quadrado preto -->
+     <!-- Exemplo de Lista -->
+       <ul type="square">
+         <li> Calça </li>
+         <li> Sapato </li>
+         <li> Blusa </li>
+         <li> Boné </li>
+       </ul>
+       <ol type="I">
+         <li> Sapato </li>
+         <li> Calça </li>
+         <li> Blusa </li>
+         <li> Boné </li>
+       </ol>
+<!-- Iframes -->
+     <!-- <iframe src="" width="" height=""> </iframe> serve para colocar outra pagina html dentro de uma pagina html -->
+     <!-- <iframe src="pagina html" width="300" height="300" title="minha primeira pagina"> </iframe> serve para posicionar o meu iframe --> 
+     <!-- posso usar o video do youtube para colcoar no site utilizando o iframe -->
+     <!-- <iframe src="" name="meu iframe" title="iframe de exemplo" posso colocar um iframe conectado a um link relativo e abri-lo na propria pagina -->
+     <!-- para encontrar o iframe de um video do youtube e so ir em share e clicar na opção de codígo -->
+     <!-- Exemplo de iframe -->
+       <iframe src="https://www.youtube.com/embed/tAaGKo4XVvM?si=6QSul9Ivr37nDOy4" title="YouTube video player" width="560" height="315" > </iframe> <br>
+<!-- Formúlarios -->
+    <!-- <form></form> essa e a TAG principal -->
+      <!-- Todas as proximas TAG'S Vão estar dentro deste campo principal -->
+    <!-- <label></label> serve para escrever uma legenda a respeito do vormulario requerido -->
+    <!-- <input> esse e um dos subcomandos que vai dentro do formulario para ele funcionar tem que vir acompanhado de um type="", essa tag não possui fechamento  -->
+    <!-- <input type="text"> ele serve para abrir um campo digitavel ao usuario -->
+    <!-- <input type="text" placeholder="Digite Aqui"> o placeholder serve para escrever o comando ao usuario dentro desse campo digitavel -->
+    <!-- <input type="password" placeholder="Digite uma senha "> serve para deixar o usuario digitar uma senha -->
+    <!-- <input type="email" placeholder="digite um Email" > serve para deixar o usuario digitar um email -->
+    <!-- <input type="submit" value="enviar" > a TAG submit serve para criar um botão de enviar  e o value permite eu escrever o conteúdo desse botão -->
+    <!-- <input required > esse atributo serve para não permitir que o arquivo seja enviado em branco e deve ser colocado em todo o input com essa finalidade -->
+    <!-- <input id="identificador" > e o uso do for="identificador" serve para identificar qual o nome que se refere a qual input o codigo deve ser feito -->
+      <!-- Exemplo -->
+      <label for="campo1"> Campo 1 </label>
+      <input id="campo1" type="text" placeholder="Digite o numero do campo" > <br> 
+    <!-- <input type="radio" name="" value="" id="" > serve para criar um botão clicavel com o intuito de fazer o usurio selecionar um otimo exemplo e o SIM e NÃO -->
+    <!-- name="" serve para dizer que todos os botões criados com o mesmo name são de uma unica tabela, então os name's devem ser iguais quando fazem parte das opções -->
+    <!-- value="" serve para dizer o valor do item selecionado quando for visualizado no arquivo que e enviado pelo usuario para o criador (informação valida nesta tag)-->
+    <!-- <input type="checkbox" name="" value="" > serve para criar itens selecionaveis, possibilitando clicar em mais de um item -->
+    <!-- name="" nesse caso, cada chackbox tem que ter um name diferente do outro -->
+      <!-- Exemplo de radio -->
+       <input type="radio" name="geral" value="bom" id="botao1" >
+       <label for="botao1"> BOM </label> <br> 
+       <input type="radio" name="geral" value="ruim" id="botao2" >
+       <label for="botao2" > RUIM </label> <br> 
+      <!-- Exemplo de chackbox -->
+       <input type="checkbox" name="item1" value="amor" id="item1" >
+       <label for="item1" > Amor </label>
+       <input type="checkbox" name="item2" value="paixao" id="item2" >
+       <label for="item2" > Paixão </label> <br>
+    <!-- <select></select> Essa teg vai servir para selecionar as opções desejadas -->
+    <!-- <select> <option> </option> </select> o option e aonde vou colocar as minhhas opções de escolha para o usuario, devo abrir e fechar a teg em cada opção disponivel -->
+    <!-- <option value="" > </option> dentro d3e value vou colocar a informação que eu quero, por exemplo uma cor, AZUL -->
+    <!-- <option selected disabled value="" ></option> esse e um exemplo da primeira opção, ela e geralmente para dizer o que o usuario deve fazer/escolher -->
+    <!-- <select name""> <select> serve para diferenciar e identificar cada select dentro do html -->
+      <!-- Exemplo -->
+       <select name="cores">
+         <option selected disabled value=""> Selecione uma cor </option>
+         <option value="Azul"> Azul </option>
+         <option value="Vermelho" > Vermelho </option>
+       </select> <br> <hr>
+       <input type="submit" value="Enviar Formúlario"> <hr>
+    <!-- <textarea></textarea> cria uma area que o usuario pode criar um texto -->
+    <!-- <textarea placeholder"" rows="" cols="" ></textarea> o rows e cols serve para aumentar a largura e comprimento do texto -->
+    <!-- <textarea id="" placeholder="" rows="" cols=""></textarea> este e o codigo completo para utilziar o text área -->
+    <!-- <button></button> serve para adicionar um botão clicavel (Não funciona para nada, ainda...) -->
+<!-- Áudio -->
+    <!-- <audio></audio> Teg de abertura e fechamento do codígo -->
+    <!-- <audio> <source src="pasta destinada ao arquivo/arquivo da pasta"> </audio> serve para procurar o arquivo de audio requerido -->
+    <!-- <audio> <source src="pasta destinada ao arquivo/arquivo da pasta" type="audio/mpeg"> </audio> o type serve para dizer ao programa o tipo de arquivo -->
+    <!-- <audio controls> <source srd="pasta destinada ao arquivo/arquivo da pasta" type="audio/mpeg"> </audio> controls serve para tornar clicavel a abertura desse audio -->
+     <!-- Exemplo de Codígo -->
+      <h2> Áudio </h2>
+      <audio controls>
+        <source src="pastadeaudio/audioescolhido.mp3" type="audio/mpeg">
+      </audio> <br> <br> 
+    <!-- <source src="linkdoaudio" > tambem posso usar um link de uma musica mp3 porem o link tem que ser destinado ao arquivo requerido que seria um MP3 direto -->
+<!-- Video -->
+    <!-- <video></video> Tag de abertura e fechamento do video -->
+    <!-- <video> <source src="pastadevideo/arquivodevideo.mp4"> </video> serve para procurar o arquivo de video baixado -->
+    <!-- <video <source src="pastadevideo/arquivodevideo.mp4" type="video/mp4" > </video> serve para dizer o tipo de arquivo ao programa -->
+    <!-- <video width="quantidade de px" height="quantidade de px" > </video> serve para dimensionar o video conforme eu desejo na pagina -->
+    <!-- <video poster="pastadeimagem/arquivodeimagem"> </video> serve para colocar uma tumbnail no video antes dele ser iniciado -->
+    <!-- <video controls> </video>  serve para colocar os atributos necessarios para o controle do usuario no video -->
+    <!-- <video autoplay> </video> serve para se eu quizer que o video seja tocado assim que a pessoa abra a pagina -->
+    <!-- <video> <source src="link do video"> </audio> tambem posso utilizar um link para o video funcionar desde que seja mp4 e respeite as especificações -->
+     <!-- Exemplo -->
+      <h2> Vídeo </h2>
+      <video controls width="100%" autoplay poster="pastadeimagem/arquivodeimagem">
+        <source src="pastadevideo/arquivodovideo.mp4"  type="video/mp4">
+      </video>
+<!-- DIV'S e HTML Semantico -->
+    <!-- DIV seriam as divisorias das partes do site, cada div possui um conteúdo ou atributo que sapare de outros atributos que nao fazem parte daquele layout -->
+    <!-- a div e muito mais conceitual do que codigo, eu utilizo ela para poder usar o css apenas no bloco escolhido -->
+      <style> 
+      .div1 {
+       background-color: aliceblue;
+     }
+     .div2 {
+       background-color: gray;
+     }
+      </style>
+     <div class="div1">
+       <h2> DIV do bloco </h2>
+       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, beatae quam aut quo exercitationem ducimus repellat delectus eligendi, fugiat, libero accusamus  tempore deserunt praesentium minima dolorem iusto similique at natus. </p>
+      </div>
+     <div class="div2">
+       <h2> DIV do bloco 2 </h2>
+       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ab corrupti distinctio non eveniet amet, culpa minus cum rerum laudantium nemo totam temporibus tempora molestiae voluptatibus quos eaque libero dolor. </p>
+     </div>
+    <!-- Aqui vemos que a div separa claramente os 2 conteúdos em 2 blocos no html cada um com informações e textos diferentes -->
+<br> <br> <hr>
+<div>
+  <style>
+    .primediv {
+      font-size: 80px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      color: black;
+      background-color: aliceblue;
+    }
+  </style>
+  <h2 class="primediv"> Estudos CSS </h2>
+</div>
+<hr> 
+<!-- Começo dos Estudos CSS (cascading Style Sheets) -->
+<!-- O CSS e responsavel pela parte estetica do html, por isso os conteúdo casa perfeitamente a linguagem html -->
+
+<!-- Tipos de CSS (inline, Externo, Interno) -->
+<!-- Inline -->
+  <!-- Serve para adicionar caracteristicas na mesma linha que estou escrevendo o codigo -->
+  <!-- <h1 style="Color: yellow; " </h1> exemplo de css inline (menos utilizado) -->
+  <!-- Exemplo de CSS inline: -->
+    <h2 style="color: red;"> Exemplo de Inline </h2>
+<!-- Interno -->
+  <!-- Serve para adicionar o css apenas aquela pagina que eu estou utilizando, se eu quiser passar para outras paginas, não consigo. -->
+  <!-- Exemplo de CSS interno: -->
+    <div>
+    <style>
+      .cssex {
+         font-size: 50px;
+         color: black;
+         font-family: Arial, Helvetica, sans-serif;
+         background-color: azure;
+         border-style: solid; 
+         border-color: black;
+         display: inline-block;
+         border-width: 7px;
+      }
+    </style>
+    <h2 class="cssex"> Exemplo de CSS interno </h2>
+    </div>
+<!-- Externo -->
+  <!-- Um arquivo externo de refencia, que o html puxa o CSS do proprio arquivo. -->
+  <!-- Primeiro crie uma tag para conectar o arquivo css no seu arquivo hmtl normal, para fazer isso, USE: -->
+    <!-- <link rel="stylesheet" href="pastaCSS/ArquivoCSS" > agora com esse codigo no HEAD, acabo linkando o arquivo css no hmtl -->
+  <!-- Isso e bom porque posso linkar um CSS base para mais de uma pagina HTML -->
+<!-- Tipos De Seletores -->
+  <!-- id="" - Identificador - Serve para referenciar algo importante, Titulos Principais(ETC), Serve para eu adicionar elementos dentro do id -->
+  <!-- o id deve conter o # no local do css e deve ser referenciado/linkado a um texto -->
+  <!-- o id não deve ser utilizado mais de uma vez no codigo e deve ser apenas para o item principal. -->
+  <!-- Exemplo de uso de id="": -->
+   <div> 
+   <style>
+    #teste {
+      color: aqua;
+      background-color: azure;
+      border-style: solid;
+      border-color: black;
+      font-size: 30px;
+      padding: 5px;
+      display: inline-block;
+    }
+   </style>
+   <p id="teste"> Exemplo de id, resaltando o funcionamento e importancia desse trem ! </p>
+   </div> 
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------->
+<hr><br><br><br><br><br><br><br>
+<!-- Java Script --> <h1> Demostrações do Codigo HTML (sem sentido Aqui) </h1>
+  <!-- Java Script Interno -->
+   <!-- Utilizo a Tag <script></script> e posso colocar os codigos que vão ser interpretados pelo navegador -->
+   <!-- Exemplo -->
+    <script>
+     alert ('Seja bem vindo ao Arquivo Mãe');
+    </script>
+   <!-- Abre uma caixa de mensagem com o Texto que eu coloquei dentro do "Alert" -->
+  <!-- Java cript Externo (Mais Utiilizado) -->
+   <!-- Abra um arquivo com o nome qualquer e o "Nomequalquer.JS" para identificar como um arquivo de java script -->
+   <!-- Para Rodar esse arquivo separado o codigo e " <script src="Arquivo.JS"></script> ", assim a e possivel chamar o java script para a pagina HTML -->
+   <!-- Se deve colocar o script no final do body, antes dele acaba dando erro pois ele não le as informações colocadas após a chamada -->
+<!-- Saídas De Conteúdo java Script -->
+  <!-- Explicação das TAG'S -->
+   <!-- Exemplo 1 de Saída -->
+    <!-- "document.getElementById" Essa tag significa que vou pegar um elemento pelo ID dele, document= referencia o documento que ele vai remover a 
+         Informação, e o getElementById= o ID da parte do texto que ira conter as informações JS -->
+    <!-- ".innerHTML" Essa tag serve para "imprimir" ou mostrar um conteúdo html que eu deseje -->
+     <!-- Embora não haja nescessidade de adicionar o ";" No final da frase, serve para ajustar e deixar explicito que o comando foi finalizado -->
+    <!-- Exemplo do codigo -->
+     document.getElementById("id que eu estou puxando").innerHTML="Meu texto java Script"; <!-- Posso adicionar tags de HTML se quiser como <b></b> -->
+   <!-- Lembrando que o arquivo HTMl com essa informação tem que estar referenciado no meu HTMl com a tag Script -->\
+  <!-- Exemplo 2 de Saída -->
+   <!-- "document.write" Possui a mesma função porém em outra forma de escrever o codigo, porém ele e mais utilizado em testes e prototipos -->
+   <!-- Essa tag tambem aceita as funcões e alterações matematicas -->
+    <!-- Exemplo -->
+    document.write('Seja bem vindo ao Arquivo Mãe');
+  <!-- Emeplo 3 de Saída -->
+   <!-- "alert" Essa tag serve para abrir uma caixa de alerta com alguma mensagem -->
+    <!-- Exemplo -->
+     alert ('Ola Bem vindo')
+  <!-- Exemplo 4 de Saída -->
+   <!-- console.log("Ola") serve para exibir uma saida de informação -->
+   <!-- A peculiaridade desta forma de saida e que ela não fica visivel ao publico, ela aparece somente como uma mensagem dentro das especificações 
+        Da pagína -->
+<!-- Declarações -->
+  <!-- São Instruções (codigos) que o computador consegue ler e interpretar -->

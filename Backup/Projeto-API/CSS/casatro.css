@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e2f;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-side {
+  flex: 1;
+  background-image: url('../IMG/Image-fundo-cadastro.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.left-side h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.left-side p {
+  max-width: 300px;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.login-btn {
+  border: 1.5px solid #fff;
+  background: transparent;
+  color:#fff;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.right-side {
+  flex: 1;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  padding: 2rem;
+}
+
+.right-side h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 350px;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  /*transição suave para bordas*/
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/*foco nos inputs*/
+input:focus {
+  outline: none;
+  border: 2px solid #7020e7;
+  background-color: #3a3a3a;
+}
+
+.cad-btn {
+  background: linear-gradient(90deg, #7020e7, #b870f3);
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cad-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.cad-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: rem 0;
+  color: #aaa;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #444;
+  margin: 0 10px;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-btn {
+  background: #333;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  background: linear-gradient(90deg, #9b5df5, #d39cff);
+  transform: scale(1.1);
+}
+
+/*classe de erro para inputs*/
+input.erro {
+  border: 2px solid #ff4d4d !important;
+  background-color: #3a2222 !important;
+  animation: shake 0.3s;
+}
+
+/*animação de shake para erros*/
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/*estilo da div de mensagens*/
+#mensagem {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  width: 80%;
+  max-width: 350px;
+  /*transição suave*/
+  transition: all 0.3s ease;
+  /*inicialmente invisível*/
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/*quando a mensagem tem conteúdo*/
+#mensagem:not(:empty) {
+  opacity: 1;
+  height: auto;
+  margin-top: 1rem;
+  padding: 0.8rem;
+}
+
+/*mensagem de erro*/
+#mensagem.erro-texto {
+  color: #ff4d4d;
+  background-color: rgba(255, 77, 77, 0.15);
+  border: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+/*mensagem de sucesso*/
+#mensagem.sucesso-texto {
+  color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.15);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/*mensagem de carregamento*/
+#mensagem.carregando-texto {
+  color: #FFA500;
+  background-color: rgba(255, 165, 0, 0.15);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+/*responsividade*/
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left-side {
+    border-radius: 0;
+  }
+  
+  .right-side {
+    border-radius: 0;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+}

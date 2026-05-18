@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bora Bora - Painel Administrativo</title>
+  <!-- Link do CSS -->
+  <link rel="stylesheet" href="CSS/Login-Adm.css">
+  <!-- Link dos ícones padrão -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="login-adm-container">
+  
+  <!-- Lado Esquerdo: Identidade da Marca -->
+  <div class="brand-side">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo Bora Bora" class="adm-logo">
+      <h2>Painel de Controle Central</h2>
+      <p>Gerenciamento de hospedagens, aprovação de guias/motoristas parceiros e métricas globais do sistema.</p>
+    </div>
+  </div>
+
+  <!-- Lado Direito: Formulário Restrito -->
+  <div class="form-side">
+    <div class="form-box">
+      
+      <div class="form-header">
+        <span class="badge-restrict"><i class="fa-solid fa-lock"></i> Acesso Restrito</span>
+        <h1>Conectar como ADM</h1>
+        <p>Insira suas credenciais de segurança corporativa.</p>
+      </div>
+
+      <form id="loginAdmForm" onsubmit="event.preventDefault(); handleAdmLogin();">
+        
+        <!-- Campo de Identificação -->
+        <div class="input-group">
+          <label for="admEmail">E-mail Institucional</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-shield-halved input-icon"></i>
+            <input type="email" id="admEmail" placeholder="nome.sobrenome@borabora.com" required>
+          </div>
+        </div>
+
+        <!-- Campo de Senha -->
+        <div class="input-group">
+          <label for="admPassword">Chave de Acesso</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-key input-icon"></i>
+            <input type="password" id="admPassword" placeholder="••••••••••••" required>
+            <i class="fa-solid fa-eye-slash toggle-password" id="togglePasswordBtn"></i>
+          </div>
+        </div>
+
+        <!-- Token/Chave de Segurança Extra (Comum em painéis de ADM) -->
+        <div class="input-group">
+          <label for="admToken">Token 2FA / Código Verificador</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-mobile-screen-button input-icon"></i>
+            <input type="text" id="admToken" placeholder="Ex: 123456" maxlength="6" required>
+          </div>
+          <small class="token-help">Insira o código de 6 dígitos gerado no seu app de autenticação.</small>
+        </div>
+
+        <!-- Links Auxiliares -->
+        <div class="form-utils">
+          <a href="#" class="forgot-link" onclick="alert('Um link de redefinição de segurança foi enviado para o seu gestor de TI.')">Problemas com o token?</a>
+        </div>
+
+        <!-- Botão de Entrada -->
+        <a href="Area-Admin.html" type="submit" class="btn-submit-adm">
+          <span>Autenticar no Painel</span>
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </a>
+
+      </form>
+
+      <!-- Voltar para o App comum -->
+      <div class="form-footer">
+        <a href="login.html"><i class="fa-solid fa-arrow-left"></i> Voltar para login de usuário</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Link do arquivo JavaScript -->
+<script src="JS/Login-Adm.js"></script>
+</body>
+</html>

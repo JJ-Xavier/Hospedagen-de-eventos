@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Show</title>
+  
+  <!-- Fontes do Google para garantir a consistência visual -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Link para o arquivo CSS externo -->
+  <link rel="stylesheet" href="../CSS/Eventos.css">
+  
+  <!-- Link do Font Awesome para os ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Nav bar -->
+<nav class="navbar">
+  <div class="left">
+    <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+  </div>
+
+  <div class="center">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Pesquisar..." id="searchInput">
+    </div>
+  </div>
+
+  <div class="right">
+    <!-- Ícone da Loja -->
+    <a href="loja.html" class="shop-link" title="Ir para a Loja">
+      <i class="fa-solid fa-bag-shopping shop-icon"></i>
+    </a>
+    <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo" class="logosidebar">
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="sidebar-header">
+    <i class="fa-solid fa-user user-big"></i>
+  </div>
+
+  <ul>
+    <li><a href="../Home-Cliente.html"> Home </a></li>
+    <li><a href="../Perfil.html"> Úsuario </a></li>
+    <li><a href="../Minhas-Compras.html"> Minhas Compras </a></li>
+    <li><a href="../Hospedagem.html"> hospede seu local aqui !</a></li>
+    <li><a href="../Minhas-Hospedagens.html"> Minhas hospedagens </a></li>
+    <li><a href="../Inscricao-Parceiro.html"> Increva-se como motorista ou guia </a></li>
+    <li><a href="login.html">sair</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <button class="config-btn">
+      <i class="fa-solid fa-gear"></i>
+      <span>Configurações</span>
+    </button>
+  </div>
+</aside>
+
+  <!-- CONTEÚDO PRINCIPAL DO EVENTO -->
+  <main class="main-content">
+    <div class="event-container">
+      
+      <!-- LADO ESQUERDO: Imagem e Banner do Show -->
+      <div class="event-media">
+        <div class="event-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80" alt="Banner do Show" class="event-image">
+          <span class="event-badge">Últimos Ingressos</span>
+        </div>
+      </div>
+
+      <!-- LADO DIREITO: Informações, Detalhes e Botão de Compra -->
+      <div class="event-details">
+        <div class="event-header-info">
+          <span class="event-category">Show Ao Vivo</span>
+          <h1 class="event-title">Neon Lights Tour 2026</h1>
+        </div>
+
+        <!-- Grid de Informações Rápidas -->
+        <div class="event-quick-info">
+          <div class="info-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <div>
+              <strong>Data</strong>
+              <p>Sábado, 24 de Outubro</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Horário</strong>
+              <p>Abertura dos portões: 19:00</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Local</strong>
+              <p>Arena Central, São Paulo - SP</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Descrição Textual do Evento -->
+        <div class="event-description">
+          <h3>Sobre o show</h3>
+          <p>Prepare-se para a noite mais eletrizante do ano! A turnê mundial chega trazendo uma experiência audiovisual inédita, palcos monumentais e todos os grandes sucessos que você ama cantados ao vivo.</p>
+          <p>Classificação indicativa: 16 anos. Menores de 16 anos entram apenas acompanhados dos pais ou responsáveis legais.</p>
+        </div>
+
+        <!-- Line-up / Atrações -->
+        <div class="event-lineup">
+          <h3>Line-up Oficial</h3>
+          <div class="tags-container">
+            <span class="artist-tag">Atração Principal</span>
+            <span class="artist-tag">DJ Convidado</span>
+            <span class="artist-tag">Banda de Abertura</span>
+          </div>
+        </div>
+
+        <!-- Área de Compra / Ação de Pagamento -->
+        <div class="event-action-box">
+          <div class="price-info">
+            <span>Ingressos a partir de</span>
+            <h2 class="event-price">R$ 120,00</h2>
+          </div>
+          <a href="#link-da-pagina-de-pagamento" class="btn-checkout">
+            <span>Garantir Meu Ingresso</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <!-- SEÇÃO: TURISMO E SERVIÇOS ADICIONAIS -->
+  <section class="tourism-services">
+    <div class="services-container">
+      
+      <div class="services-header">
+        <h2>Vai estender a viagem? <br><span>Explore a cidade com total conforto</span></h2>
+        <p>Além dos melhores shows, ajudamos você a aproveitar ao máximo os pontos turísticos locais.</p>
+      </div>
+
+      <!-- Grid reorganizado com 3 colunas balanceadas -->
+      <div class="services-grid">
+        
+        <!-- Card 1: Motorista -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-car-side"></i>
+          </div>
+          <h3>Já tem motorista?</h3>
+          <p>Evite preocupações com trânsito ou estacionamento no dia do show. Reserve um motorista particular para te levar e buscar com segurança.</p>
+          <a href="#solicitar-motorista" class="btn-service">Saber Mais</a>
+        </div>
+
+        <!-- Card 2: Guia Turístico -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3>Precisa de guia?</h3>
+          <p>Quer conhecer os principais pontos turísticos ao redor da Arena? Conte com guias credenciados para roteiros históricos e gastronômicos exclusivos.</p>
+          <a href="#solicitar-guia" class="btn-service">Ver Roteiros</a>
+        </div>
+
+        <!-- Coluna 3: O Mapa (Isolado e elegante) -->
+        <div class="map-showcase-box">
+          <div class="map-badge"><i class="fa-solid fa-location-crosshairs"></i> Localização do Evento</div>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197543265581!2d-46.6587428!3d-23.5613497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f94317979777!2sMASP!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <!-- Coluna 1: Sobre / Redes Sociais -->
+      <div class="footer-col about">
+        <span class="logo">Nos acompanhe nas redes sociais!</span>
+        <p class="footer-text">A plataforma ideal para você sair de casa e explorar o mundo!</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Navegação -->
+      <div class="footer-col links">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Shows</a></li>
+          <li><a href="#">Festivais</a></li>
+          <li><a href="#">Eventos Digitais</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Suporte -->
+      <div class="footer-col links">
+        <h3>Suporte</h3>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Newsletter -->
+      <div class="footer-col newsletter">
+        <h3>Fique por dentro</h3>
+        <p class="footer-text">Receba novidades e descontos exclusivos de ingressos por e-mail.</p>
+        <form id="newsletterForm" class="footer-form">
+          <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+          <button type="submit" class="footer-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 Seu Evento. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <!-- Link do Script padrão -->
+  <script src="../JS/Eventos.js" defer></script>
+</body>
+</html>

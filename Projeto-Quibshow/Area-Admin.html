@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - Painel de Controle</title>
+  <!-- Link do CSS Base + Customizado -->
+  <link rel="stylesheet" href="CSS/Minhas-Compras.css">
+  <!-- CSS Adicional Específico do Dashboard -->
+  <link rel="stylesheet" href="CSS/Area-Admin.css">
+  <!-- Link dos ícones padrão -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Nav bar Integrada -->
+<nav class="navbar">
+  <div class="left">
+    <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+  </div>
+
+  <div class="center">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Filtrar eventos ou hóspedes..." id="searchInput">
+    </div>
+  </div>
+
+  <div class="right">
+    <a href="loja.html" class="shop-link" title="Ir para a Loja">
+      <i class="fa-solid fa-bag-shopping shop-icon"></i>
+    </a>
+    <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo" class="logosidebar">
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Menu Lateral (Modificado os links para contexto de Admin se necessário) -->
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="sidebar-header">
+    <i class="fa-solid fa-user user-big"></i>
+  </div>
+
+  <ul>
+    <li><a href="Dashboard-Admin.html" style="color: #9c9cff;">Dashboard Geral</a></li>
+    <li><a href="login.html">Sair</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <button class="config-btn">
+      <i class="fa-solid fa-gear"></i>
+      <span>Configurações</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Conteúdo Principal - Dashboard do Administrador -->
+<main class="purchases-container">
+  
+  <!-- Título da Página -->
+  <div class="purchases-header">
+    <h1>Painel do Administrador</h1>
+    <p>Visão geral do sistema, controle de locais hospedados, ingressos e faturamento.</p>
+  </div>
+
+  <!-- Cards de Métricas Superiores -->
+  <section class="dashboard-stats">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+      <div class="stat-info">
+        <span class="stat-label">Eventos Hospedados</span>
+        <span class="stat-number">7</span>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon money"><i class="fa-solid fa-wallet"></i></div>
+      <div class="stat-info">
+        <span class="stat-label">Faturamento Total</span>
+        <span class="stat-number">R$ 14.850,00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabela / Lista de Gerenciamento de Hóspedes e Ingressos -->
+  <section class="admin-table-container">
+    <div class="table-header-title">
+      <h2><i class="fa-solid fa-users-gear"></i> Relatório de Hóspedes e Locais</h2>
+    </div>
+    
+    <div class="table-responsive">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Hóspede (Anfitrião)</th>
+            <th>Local / Evento Hospedado</th>
+            <th>Valor Ingresso</th>
+            <th>Qtd. Vendida</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Hóspede 1 -->
+          <tr>
+            <td>
+              <div class="guest-profile">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                  <strong>Carlos Alberto</strong>
+                  <span>carlos@email.com</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="event-name-tag">Pousada Vale do Sol</span></td>
+            <td>R$ 450,00</td>
+            <td><strong>12 reservas</strong></td>
+            <td>
+              <button class="btn-table-action" onclick="alert('Editando evento de Carlos...')"><i class="fa-solid fa-pen-to-square"></i></button>
+            </td>
+          </tr>
+
+          <!-- Hóspede 2 -->
+          <tr>
+            <td>
+              <div class="guest-profile">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                  <strong>Mariana Costa</strong>
+                  <span>mari@email.com</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="event-name-tag">Festival de Verão 2026</span></td>
+            <td>R$ 120,00</td>
+            <td><strong>85 ingressos</strong></td>
+            <td>
+              <button class="btn-table-action" onclick="alert('Editando evento de Mariana...')"><i class="fa-solid fa-pen-to-square"></i></button>
+            </td>
+          </tr>
+
+          <!-- Hóspede 3 -->
+          <tr>
+            <td>
+              <div class="guest-profile">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                  <strong>Roberto Souza</strong>
+                  <span>roberto@email.com</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="event-name-tag">Show Acústico - Teatro</span></td>
+            <td>R$ 80,00</td>
+            <td><strong>40 ingressos</strong></td>
+            <td>
+              <button class="btn-table-action" onclick="alert('Editando evento de Roberto...')"><i class="fa-solid fa-pen-to-square"></i></button>
+            </td>
+          </tr>
+
+          <!-- Hóspede 4 -->
+          <tr>
+            <td>
+              <div class="guest-profile">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                  <strong>Aline Mendes</strong>
+                  <span>aline@email.com</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="event-name-tag">Arena Club Lounge</span></td>
+            <td>R$ 200,00</td>
+            <td><strong>15 ingressos</strong></td>
+            <td>
+              <button class="btn-table-action" onclick="alert('Editando evento de Aline...')"><i class="fa-solid fa-pen-to-square"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+</main>
+<!-- Nova Seção: Gerenciamento de Lojas Parceiras -->
+  <section class="admin-stores-container">
+    <div class="stores-header-title">
+      <h2><i class="fa-solid fa-store"></i> Controle de Lojas Parceiras</h2>
+    </div>
+
+    <div class="stores-grid">
+      <!-- Loja 1: Casas Manina -->
+      <div class="store-card-box">
+        <div class="store-card-header">
+          <div class="store-info-main">
+            <div class="store-avatar"><i class="fa-solid fa-shop"></i></div>
+            <div>
+              <h3>Casas Manina</h3>
+              <span>ID: #001</span>
+            </div>
+          </div>
+          <span class="badge-status success">Ativa</span>
+        </div>
+        <div class="store-card-body">
+          <div class="store-meta-data">
+            <span class="meta-label">Produtos Vendidos</span>
+            <span class="meta-value">142 itens</span>
+          </div>
+          <div class="store-meta-data">
+            <span class="meta-label">Faturamento Loja</span>
+            <span class="meta-value">R$ 5.340,00</span>
+          </div>
+        </div>
+        <div class="store-card-footer">
+          <button class="btn-action-secondary" onclick="alert('Abrindo estoque de Casas Manina...')">
+            <i class="fa-solid fa-boxes-stacked"></i> Ver Estoque
+          </button>
+        </div>
+      </div>
+
+      <!-- Loja 2: Ululu -->
+      <div class="store-card-box">
+        <div class="store-card-header">
+          <div class="store-info-main">
+            <div class="store-avatar"><i class="fa-solid fa-shop"></i></div>
+            <div>
+              <h3>Ululu</h3>
+              <span>ID: #002</span>
+            </div>
+          </div>
+          <span class="badge-status success">Ativa</span>
+        </div>
+        <div class="store-card-body">
+          <div class="store-meta-data">
+            <span class="meta-label">Produtos Vendidos</span>
+            <span class="meta-value">98 itens</span>
+          </div>
+          <div class="store-meta-data">
+            <span class="meta-label">Faturamento Loja</span>
+            <span class="meta-value">R$ 3.120,00</span>
+          </div>
+        </div>
+        <div class="store-card-footer">
+          <button class="btn-action-secondary" onclick="alert('Abrindo estoque de Ululu...')">
+            <i class="fa-solid fa-boxes-stacked"></i> Ver Estoque
+          </button>
+        </div>
+      </div>
+
+      <!-- Loja 3: ChiqueChique Bahia -->
+      <div class="store-card-box">
+        <div class="store-card-header">
+          <div class="store-info-main">
+            <div class="store-avatar"><i class="fa-solid fa-shop"></i></div>
+            <div>
+              <h3>ChiqueChique Bahia</h3>
+              <span>ID: #003</span>
+            </div>
+          </div>
+          <span class="badge-status success">Ativa</span>
+        </div>
+        <div class="store-card-body">
+          <div class="store-meta-data">
+            <span class="meta-label">Produtos Vendidos</span>
+            <span class="meta-value">210 itens</span>
+          </div>
+          <div class="store-meta-data">
+            <span class="meta-label">Faturamento Loja</span>
+            <span class="meta-value">R$ 8.450,00</span>
+          </div>
+        </div>
+        <div class="store-card-footer">
+          <button class="btn-action-secondary" onclick="alert('Abrindo estoque de ChiqueChique Bahia...')">
+            <i class="fa-solid fa-boxes-stacked"></i> Ver Estoque
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Rodapé padrão unificado -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col about">
+      <span class="logo">Nos acompanhe nas redes sociais!</span>
+      <p class="footer-text">A plataforma ideal para você sair de casa e explorar o mundo!</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-col links">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a href="#">Festivais</a></li>
+        <li><a href="#">Eventos Digitais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+    <div class="footer-col newsletter">
+      <h3>Fique por dentro</h3>
+      <p class="footer-text">Receba novidades e descontos exclusivos de ingressos por e-mail.</p>
+      <form id="newsletterForm" class="footer-form">
+        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="footer-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Seu Evento. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Reutilizando seu script para controle do menu lateral -->
+<script src="JS/Minhas_Compras.js"></script>
+</body>
+</html>

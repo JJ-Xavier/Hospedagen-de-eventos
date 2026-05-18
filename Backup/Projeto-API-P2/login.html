@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login </title>
+  <link rel="stylesheet" href="CSS/login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-side">
+      <h2>Login</h2>
+      <form id="form-login">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="senha" name="senha" placeholder="Senha" required>
+        
+        <div class="options">
+          <label><input type="checkbox" id="lembrar"> Lembrar-me</label>
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit" class="btn-login">Entrar</button>
+        <p class="criar-conta"> Seja bem vindo de volta !</p><br>
+        <p id="mensagem"></p>
+      </form>
+
+      <div class="divider">
+        <p> Ou </p>
+      </div>
+
+        <div class="social-login">
+            <div class="socials">
+              <button class="social-btn google">G</button>
+              <button class="social-btn github">🐱‍💻</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="right-side">
+      <h1> Ainda não possui uma conta ?</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolorum, iste voluptatem, eos ducimus hic nam, quae debitis dicta ipsum odit! Inventore rem tempore sint consequatur quis deserunt, voluptates adipisci!</p>
+      <a href="Cadastro.html" class="cadastro-bnt"> Faça o Cadastro </a>
+    </div>
+  </div>
+
+  <script src="JS/Login.js"></script>
+</body>
+</html>

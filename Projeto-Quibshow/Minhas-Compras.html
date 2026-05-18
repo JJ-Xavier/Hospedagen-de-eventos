@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Compras - Histórico de Pedidos</title>
+  <!-- Link do CSS -->
+  <link rel="stylesheet" href="CSS/Minhas-Compras.css">
+  <!-- Link dos ícones padrão -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Nav bar -->
+<nav class="navbar">
+  <div class="left">
+    <i class="fa-solid fa-user user-icon" id="menu-btn"></i>
+  </div>
+
+  <div class="center">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Pesquisar..." id="searchInput">
+    </div>
+  </div>
+
+  <div class="right">
+    <!-- Ícone da Loja -->
+    <a href="loja.html" class="shop-link" title="Ir para a Loja">
+      <i class="fa-solid fa-bag-shopping shop-icon"></i>
+    </a>
+    <img src="/Projeto/Documentos-SHOW/Criativo-API/QBlogo.png" alt="Logo" class="logosidebar">
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Menu Lateral -->
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="sidebar-header">
+    <i class="fa-solid fa-user user-big"></i>
+  </div>
+
+  <ul>
+    <li><a href="Home-Cliente.html"> Home </a></li>
+    <li><a href="Perfil.html "> Úsuario </a></li>
+    <li><a href="Minhas-Compras.html"> Minhas Compras </a></li>
+    <li><a href="Hospedagem.html"> hospede seu local aqui !</a></li>
+    <li><a href="Minhas-Hospedagens.html"> Minhas hospedagens </a></li>
+    <li><a href="Inscricao-Parceiro.html"> Increva-se como motorista ou guia </a></li>
+    <li><a href="login.html">sair</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <button class="config-btn">
+      <i class="fa-solid fa-gear"></i>
+      <span>Configurações</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Conteúdo Principal - Histórico de Compras -->
+<main class="purchases-container">
+  
+  <!-- Título da Página -->
+  <div class="purchases-header">
+    <h1>Minhas Compras</h1>
+    <p>Gerencie seus ingressos, reservas e acompanhe o status dos seus pedidos recentes.</p>
+  </div>
+
+  <!-- Lista de Pedidos -->
+  <section class="orders-list">
+    
+    <!-- CARD DE PEDIDO 1 (Aprovado / Ingresso Ativo) -->
+    <div class="order-card">
+      <div class="order-header">
+        <div class="order-meta">
+          <span class="order-number">Pedido <strong>#84920</strong></span>
+          <span class="order-date">Realizado em: 14/05/2026</span>
+        </div>
+        <span class="badge-status success">Pagamento Aprovado</span>
+      </div>
+      
+      <div class="order-body">
+        <div class="item-thumb">
+          <i class="fa-solid fa-ticket"></i>
+        </div>
+        <div class="item-details">
+          <h3>Festival de Verão 2026 - Ingresso Pista</h3>
+          <p class="item-info"><i class="fa-solid fa-calendar-days"></i> Data do Evento: 18/07/2026 às 16:00</p>
+          <p class="item-info"><i class="fa-solid fa-location-dot"></i> Arena Central, São Paulo - SP</p>
+          <p class="item-qty">Quantidade: 2 ingressos</p>
+        </div>
+        <div class="item-pricing">
+          <span class="price-label">Total pago</span>
+          <span class="price-value">R$ 240,00</span>
+        </div>
+      </div>
+      
+      <div class="order-actions">
+        <button class="btn-action-primary" onclick="alert('Gerando PDF do Ingresso / QR Code...')">
+          <i class="fa-solid fa-qrcode"></i> Acessar Ingressos
+        </button>
+        <button class="btn-action-secondary" onclick="alert('Abrindo detalhes do recibo...')">Ver Detalhes</button>
+      </div>
+    </div>
+
+    <!-- NOVO CARD: CARD DE PEDIDO 2 (Produto de Loja - Enviado) -->
+    <div class="order-card">
+      <div class="order-header">
+        <div class="order-meta">
+          <span class="order-number">Pedido <strong>#84855</strong></span>
+          <span class="order-date">Realizado em: 12/05/2026</span>
+        </div>
+        <span class="badge-status success" style="background-color: #e0f2fe; color: #0369a1;">Pedido Enviado</span>
+      </div>
+      
+      <div class="order-body">
+        <div class="item-thumb" style="background-color: #f0fdf4; color: #16a34a;">
+          <i class="fa-solid fa-box-open"></i>
+        </div>
+        <div class="item-details">
+          <h3>Camiseta Oficial - Festival de Verão 2026 (Preta / G)</h3>
+          <p class="item-info"><i class="fa-solid fa-truck"></i> Entrega estimada: até 22/05/2026</p>
+          <p class="item-info"><i class="fa-solid fa-house-chimney"></i> Enviar para: Seu Endereço Cadastrado</p>
+          <p class="item-qty">Quantidade: 1 unidade</p>
+        </div>
+        <div class="item-pricing">
+          <span class="price-label">Total pago</span>
+          <span class="price-value">R$ 89,90</span>
+        </div>
+      </div>
+      
+      <div class="order-actions">
+        <button class="btn-action-secondary" onclick="alert('Código de rastreio: BR123456789BR \nRedirecionando para os Correios...')">
+          <i class="fa-solid fa-location-arrow"></i> Rastrear Objeto
+        </button>
+        <button class="btn-action-secondary" onclick="alert('Abrindo detalhes da nota fiscal...')">Ver Detalhes</button>
+      </div>
+    </div>
+
+    <!-- CARD DE PEDIDO 3 (Pendente) -->
+    <div class="order-card">
+      <div class="order-header">
+        <div class="order-meta">
+          <span class="order-number">Pedido <strong>#84711</strong></span>
+          <span class="order-date">Realizado em: 10/05/2026</span>
+        </div>
+        <span class="badge-status warning">Aguardando PIX / Boleto</span>
+      </div>
+      
+      <div class="order-body">
+        <div class="item-thumb">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div class="item-details">
+          <h3>Reserva: Pousada Vale do Sol (Fim de Semana)</h3>
+          <p class="item-info"><i class="fa-solid fa-calendar-days"></i> Check-in: 03/07/2026 | Check-out: 05/07/2026</p>
+          <p class="item-info"><i class="fa-solid fa-location-dot"></i> Serra Negra, SP</p>
+          <p class="item-qty">Quarto de Casal Standard</p>
+        </div>
+        <div class="item-pricing">
+          <span class="price-label">Total do Pedido</span>
+          <span class="price-value">R$ 450,00</span>
+        </div>
+      </div>
+      
+      <div class="order-actions">
+        <button class="btn-action-accent" onclick="alert('Abrindo código de cópia do PIX ou código de barras...')">
+          <i class="fa-solid fa-copy"></i> Copiar Código de Pagamento
+        </button>
+        <button class="btn-action-secondary" onclick="alert('Cancelando pedido...')">Cancelar Pedido</button>
+      </div>
+    </div>
+
+    <!-- CARD DE PEDIDO 4 (Cancelado) -->
+    <div class="order-card cancelled">
+      <div class="order-header">
+        <div class="order-meta">
+          <span class="order-number">Pedido <strong>#83104</strong></span>
+          <span class="order-date">Realizado em: 22/04/2026</span>
+        </div>
+        <span class="badge-status danger">Cancelado</span>
+      </div>
+      
+      <div class="order-body">
+        <div class="item-thumb">
+          <i class="fa-solid fa-music"></i>
+        </div>
+        <div class="item-details">
+          <h3>Show Acústico - Teatro Municipal</h3>
+          <p class="item-info"><i class="fa-solid fa-calendar-days"></i> Data do Evento: 30/04/2026</p>
+          <p class="item-qty">Quantidade: 1 ingresso</p>
+        </div>
+        <div class="item-pricing">
+          <span class="price-label">Estornado</span>
+          <span class="price-value">R$ 80,00</span>
+        </div>
+      </div>
+      
+      <div class="order-actions">
+        <span class="action-notice">Este pedido foi cancelado e o valor foi totalmente reembolsado.</span>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- Rodapé padrão unificado -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col about">
+      <span class="logo">Nos acompanhe nas redes sociais!</span>
+      <p class="footer-text">A plataforma ideal para você sair de casa e explorar o mundo!</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-col links">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a href="#">Festivais</a></li>
+        <li><a href="#">Eventos Digitais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+    <div class="footer-col newsletter">
+      <h3>Fique por dentro</h3>
+      <p class="footer-text">Receba novidades e discounts exclusivos de ingressos por e-mail.</p>
+      <form id="newsletterForm" class="footer-form">
+        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="footer-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Seu Evento. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Link do arquivo JavaScript -->
+<script src="JS/Minhas_Compras.js"></script>
+</body>
+</html>
